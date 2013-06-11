@@ -25,11 +25,13 @@ What could be great to add?...
 This has only been tested on image files, object files may or may not work. They are fairly similar in format.
 
 Example:
+```javascript
 fs = require('fs');
 
 fd = fs.openSync('myexecutable.exe','r');
 winObj = new WindowsExeFile(fd);
 winObj.WindowsExeRead();
+```
 
 Various methods read (sometimes recursively) data from the winObj.Position. You can modify the position to anywhere
 you want in the file then issue a read for any of the support structures, however 99% of use cases will be executing 
